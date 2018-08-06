@@ -60,7 +60,7 @@ class URandomEngine
 			srand((unsigned)time(NULL));
 
 #ifdef ___UNIFORM_RANDOM_ENGINE
-			defaultRandomEngine = new std::default_random_engine;
+			defaultRandomEngine = new std::default_random_engine((unsigned)time(NULL));
 			uniformInt = new std::uniform_int_distribution<int>(-RANDOM_ENGINE_MAX_INT, RANDOM_ENGINE_MAX_INT);
 #endif // ___UNIFORM_RANDOM_ENGINE
 		}
